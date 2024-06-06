@@ -1,0 +1,44 @@
+<nav class="bg-[#fff] px-3 py-6 text-gray-700 border-b">
+  <div
+    class="container mx-auto px-4 md:flex md: justify-between items-center gap-6"
+  >
+    <!-- Logo -->
+    <div class="flex items-center justify-between md:w-auto w-full">
+      <a href="#" class="flex items-center py-5 px-2 text-gray-900 flex-1">
+        <span class="font-bold text-xl lg:text-2xl">Stranger. Mushwana</span>
+      </a>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleNav()" class="mobile-menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Primary Navigation -->
+    <div
+      class="hidden md:flex md:flex-row flex-col items-start justify-center md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu"
+    >
+      <a href="#" class="py-2 px-3 block">Home</a>
+      <a href="#" class="py-2 px-3 block">About</a>
+      <a href="#" class="py-2 px-3 block">Projects</a>
+      <a href="#" class="py-2 px-3 block">Skills</a>
+      <a href="#" class="py-2 px-3 block">Work</a>
+      <a href="#" class="py-2 px-3 block">Contact</a>
+    </div>
+  </div>
+</nav>
