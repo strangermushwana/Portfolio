@@ -1,10 +1,14 @@
-<nav class="bg-[#fff] px-3 py-6 text-gray-700 border-b">
+<nav class="bg-[#fff] z-10 px-3 p-3 text-gray-700 border-b sticky top-0">
   <div
     class="container mx-auto px-4 md:flex md: justify-between items-center gap-6"
   >
     <!-- Logo -->
     <div class="flex items-center justify-between md:w-auto w-full">
-      <a href="#" class="flex items-center py-5 px-2 text-gray-900 flex-1">
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/']"
+        class="flex items-center py-5 px-2 text-gray-900 flex-1"
+      >
         <span class="font-bold text-xl lg:text-2xl">Stranger. Mushwana</span>
       </a>
       <!-- Mobile Menu Button -->
@@ -33,12 +37,49 @@
     <div
       class="hidden md:flex md:flex-row flex-col items-start justify-center md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu"
     >
-      <a href="#" class="py-2 px-3 block">Home</a>
-      <a href="#" class="py-2 px-3 block">About</a>
-      <a href="#" class="py-2 px-3 block">Projects</a>
-      <a href="#" class="py-2 px-3 block">Skills</a>
-      <a href="#" class="py-2 px-3 block">Work</a>
-      <a href="#" class="py-2 px-3 block">Contact</a>
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/']"
+        [ngClass]="{ 'font-bold': activeRoute === '/' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >Home</a
+      >
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/about']"
+        [ngClass]="{ 'font-bold': activeRoute === '/about' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >About</a
+      >
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/work']"
+        [ngClass]="{ 'font-bold': activeRoute === '/work' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >Work</a
+      >
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/projects']"
+        [ngClass]="{ 'font-bold': activeRoute === '/projects' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >Projects</a
+      >
+
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/blog']"
+        [ngClass]="{ 'font-bold': activeRoute === '/blog' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >Blog</a
+      >
+      <a
+        href="javascript:void(0)"
+        [routerLink]="['/contact']"
+        [ngClass]="{ 'font-bold': activeRoute === '/contact' }"
+        class="py-2 px-3 block hover:text-gray-500"
+        >Contact</a
+      >
     </div>
   </div>
 </nav>
