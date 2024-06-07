@@ -1,0 +1,100 @@
+<div
+  class="flex flex-col md:flex-row justify-center items-center max-w-6xl mt-10 p-4 mx-auto"
+>
+  <div
+    class="hidden md:w-1/2 mb-8 md:mb-0 md:flex justify-center relative items-center"
+  >
+    <div class="envelope w-[16rem] h-[10rem] rounded-lg overflow-hidden"></div>
+    <div
+      class="invisible md:visible bg-gray-200 px-10 py-5 rounded-full absolute top-[25rem] z-10"
+    ></div>
+    <div
+      class="invisible md:visible bg-gray-200 px-10 py-2 rounded-full absolute top-[15rem] left-[3rem] z-10"
+    ></div>
+    <div
+      class="invisible lg:visible bg-green-200 px-2 py-2 absolute top-[10rem] left-[3rem] z-10"
+    ></div>
+
+    <div
+      class="invisible md:visible bg-gray-200 px-[5rem] py-5 rounded-full absolute top-[-10rem] z-10"
+    ></div>
+
+    <div
+      class="invisible md:visible bg-red-200 px-2 py-2 rounded-full absolute right-[10rem] top-[-5rem] z-10"
+    ></div>
+  </div>
+  <div class="md:w-1/2 p-6 md:p-0 w-full">
+    <h1 class="text-4xl font-bold text-center">Let's chat</h1>
+    <div class="mt-10">
+      <form>
+        <div class="mb-6 relative">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-700"
+            >Name</label
+          >
+          <div
+            class="absolute inset-y-[3.25rem] start-0 flex justify-center items-center ps-3.5 pointer-events-none"
+          >
+            <img src="../../assets/pers.png" class="w-5 h-5" alt="" />
+          </div>
+          <input
+            type="text"
+            id="name"
+            class="bg-gray-50 border text-sm outline-none rounded-lg w-full ps-10 p-4"
+            placeholder="Homer Simpson"
+          />
+        </div>
+
+        <div class="mb-6 relative">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-700"
+            >Email</label
+          >
+          <div
+            class="absolute inset-y-[3.25rem] start-0 flex justify-center items-center ps-3.5 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 16"
+            >
+              <path
+                d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+              />
+              <path
+                d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border text-sm outline-none rounded-lg w-full ps-10 p-4"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            class="mt-1 bg-gray-50 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm"
+          ></textarea>
+        </div>
+        <div class="my-4">
+          <button
+            type="submit"
+            class="w-full flex bg-black justify-center py-3 px-10 border border-transparent rounded-md shadow-sm text-sm font-medium text-white"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.envelope {
+  height: 200px;
+  width: 320px;
+  background-color: #e1e1e1;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.envelope:before, .envelope:after {
+  content: "";
+  height: 240px;
+  width: 240px;
+  border: 1px solid #e7dfce;
+  position: absolute;
+  border-radius: 32px 32px 20px 32px;
+  background-color: #d6d6d6;
+}
+.envelope:before {
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.envelope:after {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 1px 1px 20px 1px #7c7b7a;
+}
