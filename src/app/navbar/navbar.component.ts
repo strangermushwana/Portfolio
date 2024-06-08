@@ -25,14 +25,25 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.pipe(
       takeUntil(this.$unsubscribe),
       tap((res:any) => this.activeRoute = res?.url),
+      tap(() => {
+        const menu = this.document.querySelector('.navigation-menu')
+        const cross = this.document.querySelector('.mobile-menu-cross')
+        const btn = this.document.querySelector('.mobile-menu-button')
+        menu?.classList.add('hidden')
+        cross?.classList.add('hidden')
+        btn?.classList.remove('hidden')
+      }),
+      tap(() => window?.scroll(0,0))
     ).subscribe()
   }
 
   toggleNav(): void {
+    const cross = this.document.querySelector('.mobile-menu-cross')
     const btn = this.document.querySelector('.mobile-menu-button')
     const menu = this.document.querySelector('.navigation-menu')
     btn?.classList.toggle('hidden')
     menu?.classList.toggle('hidden')
+    cross?.classList.toggle('hidden')
   }
 
   ngOnDestroy(): void {

@@ -1,4 +1,4 @@
-<nav class="bg-[#fff] z-10 px-3 p-3 text-gray-700 border-b sticky top-0">
+<nav class="bg-[#fff] z-[30] px-3 p-3 text-gray-700 border-b sticky top-0">
   <div
     class="container mx-auto px-4 md:flex md: justify-between items-center gap-6"
   >
@@ -13,23 +13,37 @@
       </a>
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center">
-        <button (click)="toggleNav()" class="mobile-menu-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none">
+        <button (click)="toggleNav()">
+          <div class="mobile-menu-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none">
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="mobile-menu-cross hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="23"
+              height="23"
+            >
               <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </g>
-          </svg>
+                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -58,13 +72,13 @@
         class="py-2 px-3 block hover:text-gray-500"
         >Work</a
       >
-      <a
+      <!-- <a
         href="javascript:void(0)"
         [routerLink]="['/projects']"
         [ngClass]="{ 'font-bold': activeRoute === '/projects' }"
         class="py-2 px-3 block hover:text-gray-500"
         >Projects</a
-      >
+      > -->
 
       <!-- <a
         href="javascript:void(0)"
