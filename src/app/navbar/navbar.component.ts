@@ -1,5 +1,5 @@
-import { CommonModule, DOCUMENT } from '@angular/common'
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core'
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common'
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core'
 import { Router, RouterModule } from '@angular/router'
 import { Subject, takeUntil, tap } from 'rxjs'
 
@@ -15,13 +15,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
   $unsubscribe: Subject<void> = new Subject()
 
   activeRoute: string = ''
+  isBrowser: boolean = false
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: any,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.isBrowser = isPlatformBrowser(this.platformId)
     this.router.events.pipe(
       takeUntil(this.$unsubscribe),
       tap((res:any) => this.activeRoute = res?.url),
@@ -33,7 +36,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
         cross?.classList.add('hidden')
         btn?.classList.remove('hidden')
       }),
-      tap(() => window?.scroll(0,0))
+      tap(() => {
+        if (this.isBrowser) window.scrollTo(0, 0)
+      })
     ).subscribe()
   }
 

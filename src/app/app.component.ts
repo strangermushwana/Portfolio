@@ -11,7 +11,5 @@ import { CommonModule } from '@angular/common'
     imports: [RouterOutlet, CommonModule, NavbarComponent]
 })
 export class AppComponent {
-  title = 'portfolio-final'
-
   constructor(private router: Router) {}
 }
