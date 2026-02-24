@@ -36,9 +36,9 @@
           class="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg"
         >
           <img
-            class="rounded-t-lg"
-            src="https://cdn.codersociety.com/uploads/graphql-reasons.png"
-            alt=""
+            class="rounded-t-lg w-full object-cover"
+            [src]="item.image"
+            [alt]="item.title"
           />
           <div class="py-6 px-8 rounded-lg bg-white">
             <h1
@@ -55,7 +55,7 @@
                 target="_blank"
                 class="py-3 px-5 bg-orange-400 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
-                View Code
+                View Project
               </a>
             </div>
           </div>
